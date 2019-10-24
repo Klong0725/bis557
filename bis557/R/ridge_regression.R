@@ -3,7 +3,6 @@
 #--------Due: 2019/10/23--------#
 
 # Implement a ridge regression that takes into account colinear (or nearly colinear) regression variables.
-# Ref: https://github.com/SteffenMoritz/ridge/blob/master/R/linearRidge.R
 
 #' Implement ridge regression
 #'

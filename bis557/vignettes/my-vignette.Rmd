@@ -127,7 +127,7 @@ con_num_2 <- (max(svals)+lambda) / (min(svals)+lambda)
 # generate data y and see the difference between estimators and true beta
 for (k in 1:N) {
   y <- X %*% beta + rnorm(n)
-  betahat <- solve(crossprod(X) + lambda, crossprod(X, y))
+  betahat <- ridge_regression(X, y, lambda = lambda)$coefficients
   l2_errors[k] <- sqrt(sum((betahat - beta)^2))
 }
 error_2 <- mean(l2_errors)
@@ -135,7 +135,7 @@ error_2 <- mean(l2_errors)
 cat("The condition number of X is:", con_num_2)
 cat("The error rate is:", error_2)
 ```
-We can see that the condition number is much smaller.
+We can see that the condition number and error rate is much smaller. So that we can conclude that ridge regression can increase numerical stability and decrease statistical error.
 
 ## Question 5
 Reference: http://statsmaths.github.io/stat612/lectures/lec17/lecture17.pdf
