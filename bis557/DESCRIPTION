@@ -1,0 +1,19 @@
+Package: bis557
+Type: Package
+Title: Conduct ridge regression and select optimal lambda
+Version: 0.1.0
+Author: Keyi Long
+Maintainer: The package maintainer <keyi.long@yale.edu>
+Description: This package contains two functions and three answer process of questions in homework2.; One function is called "ridge_regression" that can fit data into a ridge regression model and the other is "opt_lambda" that can select the optimized lambda
+License: LGPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    knitr,
+    rmarkdown,
+    testthat,
+    MASS,
+    casl,
+    glmnet
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
